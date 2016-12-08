@@ -1,0 +1,17 @@
+
+{   
+    "name" : "ai_beamgolem",
+    "images" : {
+                   (0, -1)     :"beamgolem1.gif",
+                   (1, 0)  :"beamgolem2.gif",
+                   (0, 1)   :"beamgolem3.gif",
+                   (-1, 0)   :"beamgolem4.gif"
+               },
+    "died_images" : ["bomb_1.gif", "bomb_2.gif", "bomb_3.gif"],
+    "maxhealth": 50,
+    "speed": [2, 2],
+    "shot_time_range": [0, 3],
+    "turn_rate": 0.01
+
+
+}

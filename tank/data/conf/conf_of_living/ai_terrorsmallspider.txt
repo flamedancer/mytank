@@ -1,0 +1,14 @@
+{   
+    "name" : "ai_terrorsmallspider",
+    "images" : {
+                   (0, -1)     :"terrorsmallspider1.gif",
+                   (1, 0)  :"terrorsmallspider2.gif",
+                   (0, 1)   :"terrorsmallspider3.gif",
+                   (-1, 0)   :"terrorsmallspider4.gif"
+               },
+    "died_images" : ["bomb_3.gif"],
+    "maxhealth": 10,
+    "speed": [4, 4],
+    "target" : 1
+
+}

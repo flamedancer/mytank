@@ -1,0 +1,242 @@
+{
+
+                    
+    "mytank" : {
+                    "ai_beamgolem": [1, 0, 0],
+                    "ai_beamgolem:beamBullet" : [0, 30, 0],
+                    "ai_normaltank" : [1, 0, 0],
+                    "ai_normaltank:normalBullet": [0, 10, 10],
+                    "ai_terrorsmallspider": [1, 10, 10],
+                    "ai_bossgoddess": [0, 0, 0],
+                    "ai_pullwavegolem": [1, 1, 0],
+                    "ai_pushwavegolem": [1, 0, 0],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0],
+                    'ai_icetank' : [1, 0, 0]
+                },
+                
+    "mytank:normalBullet" : 
+                {
+                    "ai_normaltank" : [1, 10, 10],
+                    "ai_normaltank:normalBullet" : [1, 10, 10],
+                    "ai_terrorsmallspider" : [1, 10, 10],
+                    "ai_beamgolem": [1, 10, 10],
+                    "ai_bossgoddess" : [1, 10, 10],
+                    "ai_pullwavegolem": [1, 10, 10],
+                    "ai_tankfactory":[1, 10, 10],
+                    'ai_pillbox': [1, 10, 10],
+                    'ai_icetank' : [1, 10, 10],
+                    "ai_bossflowerfairy":[1, 10, 10]
+                    
+                },
+                
+    "ai_normaltank" :
+                {
+                    "ai_normaltank" : [0, 0, 0],
+                    "mytank" : [1, 0, 0],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank:normalBullet" : [0, 10, 10],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0],
+                    'ai_icetank' : [0, 0, 0]
+                    
+                  },
+    
+    "ai_icetank" :
+                {
+                    "ai_normaltank" : [0, 0, 0],
+                    "mytank" : [1, 20, 20, 1],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank:normalBullet" : [0, 10, 10],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0],
+                    'ai_icetank' : [0, 0, 0]
+                    
+                  },
+  
+
+    "ai_normaltank:normalBullet" :
+                {
+                    "mytank" : [1, 10, 10],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank_normalBullet" : [1, 10, 10],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0],
+                },
+        
+    "ai_icetank:iceBullet" :
+                {
+                    "mytank" : [1, 10, 10, 1],
+                    "mytank:skill_fireshield" : [1, 10, 5],
+                    "mytank_normalBullet" : [0, 10, 10],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0]
+                    
+                  },
+
+    "mytank:skill_fireshield" : 
+                {
+                    "ai_normaltank" : [0, 10, 10],
+                    "ai_normaltank:normalBullet" : [0, 10, 10],
+                    "ai_terrorsmallspider":[0, 10, 10],
+                    "ai_bossspider": [0, 10, 10],
+                    "ai_beamgolem": [0, 10, 10],
+                    "ai_bossgoddess": [0, 10, 10],
+                    "ai_pullwavegolem":[0, 10, 10],
+                    "ai_pushwavegolem":[0, 10, 10],
+                    'ai_pillbox': [0, 0, 0],
+                    'ai_icetank' : [1, 5, 10]
+                },
+
+    "ai_terrorsmallspider":
+                {
+                    "mytank" : [1, 10, 10],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank:normalBullet" : [1, 10, 10],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0],
+                },
+                
+    "ai_bossspider":
+                {
+                    "mytank" : [1, 0, 5],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank:normalBullet" : [1, 10, 10],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0]
+                
+                },
+    "ai_beamgolem":
+                {
+                    "ai_beamgolem": [1, 0, 0],
+                    "ai_normaltank" : [1, 0, 0],
+                    "mytank" : [1, 0, 0],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank:normalBullet" : [0, 10, 10],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0]
+                
+                },
+    "ai_beamgolem:beamBullet":
+                {
+                    "mytank" : [1, 0, 30],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank_normalBullet" : [1, 10, 10],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0]
+                
+                },
+    "ai_bossgoddess:icePicr":
+                {
+                    "mytank" : [1, 0, 10],
+                    "mytank:skill_fireshield" : [1, 0, 10],
+                    "mytank_normalBullet" : [1, 0, 10]
+                
+                },
+    "ai_bossgoddess:meteor":
+                {
+                    "mytank" : [1, 0, 1],
+                    "mytank:skill_fireshield" : [1, 0, 10],
+                    "mytank_normalBullet" : [1, 0, 10]
+                
+                },
+    "ai_bossgoddess:rattan":
+                {
+                    "mytank" : [1, 0, 5]                                
+                },
+    "ai_bossgoddess":
+                {   
+                    "mytank" : [0, 0, 10],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank:normalBullet" : [1, 10, 10]
+                
+                
+                
+                },
+    "ai_pullwavegolem":
+                {
+                    "mytank" : [1, 0, 0],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank:normalBullet" : [1, 10, 10],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0]
+                },
+    "ai_pullwavegolem:pullwave":
+                {
+                    "mytank" : [0, 0, 0, 1]
+                },
+    
+    "ai_pushwavegolem":
+                {
+                    "mytank" : [1, 0, 0],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank:normalBullet" : [1, 10, 10],
+                    "ai_tankfactory":[1, 0, 0],
+                    'ai_pillbox': [1, 0, 0]
+                },
+
+    "ai_pushwavegolem:pushwave":
+            {
+                "mytank" : [0, 0, 1, 1]
+            },
+     
+    'ai_pillbox:normalBullet':
+            {
+                    "mytank" : [1, 10, 10],
+                    "mytank:skill_fireshield" : [1, 10, 10],
+                    "mytank_normalBullet" : [1, 10, 10],
+                    "ai_tankfactory":[1, 0, 0]
+            },
+
+    "ai_bossflowerfairy:flower":
+            {
+                "mytank" : [1, 10, 10],
+                "mytank:skill_fireshield" : [1, 10, 10],
+                "mytank_normalBullet" : [1, 0, 10]
+            
+            },
+
+    "ai_bossbouncer":
+            {
+                "ai_normaltank" : [0, 0, 0],
+                "mytank" : [1, 2, 2],
+                "mytank:skill_fireshield" : [1, 10, 10],
+                "mytank:normalBullet" : [0, 10, 10],
+                "ai_tankfactory":[1, 0, 0],
+                'ai_pillbox': [1, 0, 0],
+                'ai_icetank' : [0, 0, 0],
+                "ai_bossbouncer:bounceBullet": [0, 0, 0]
+                
+            },
+
+    "ai_bossbouncer:bounceBullet":
+            {
+                "mytank" : [0, 20, 20, 1],
+                "mytank:skill_fireshield" : [1, 10, 20],
+                "mytank_normalBullet" : [0, 10, 10],
+                "ai_tankfactory":[1, 0, 0],
+                'ai_pillbox': [1, 0, 0],
+                "ai_bossbouncer:bounceBullet": [0, 0, 0],
+                "ai_bossbouncer":[0, 0, 0]
+            },
+
+ 
+    "ai_tankfactory":
+            {},
+    'ai_pillbox':
+            {},
+    
+    
+
+    "explod" : {}
+
+
+
+
+
+
+
+
+
+
+}

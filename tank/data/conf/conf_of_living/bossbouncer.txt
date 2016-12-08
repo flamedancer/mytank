@@ -1,0 +1,21 @@
+{   
+    "name" : "ai_bossbouncer",
+    "images" : {
+                   (0, -1)     :"bossbouncer1.gif",
+                   (0.707, -0.707):"bossbouncer5.gif",
+                   (1, 0)  :"bossbouncer2.gif",
+                   (0.707, 0.707):"bossbouncer6.gif",
+                   (0, 1)   :"bossbouncer3.gif",
+                   (-0.707, 0.707):"bossbouncer7.gif",
+                   (-1, 0)   :"bossbouncer4.gif",
+                   (-0.707, -0.707):"bossbouncer8.gif"
+                   
+               },
+    "died_images" : ["bomb_1.gif", "bomb_2.gif", "bomb_3.gif"],
+    "maxhealth": 500,
+    "speed": [3, 3],
+    "shot_time_range": [0.2, 2],
+    "turn_rate": 0.02
+
+
+}

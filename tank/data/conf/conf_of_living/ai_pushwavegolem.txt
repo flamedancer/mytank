@@ -1,0 +1,16 @@
+{   
+    "name" : "ai_pushwavegolem",
+    "images" : {
+                   (0, -1)     :"pushwave_golem1.gif",
+                   (1, 0)  :"pushwave_golem2.gif",
+                   (0, 1)   :"pushwave_golem3.gif",
+                   (-1, 0)   :"pushwave_golem4.gif"
+               },
+    "died_images" : ["bomb_1.gif", "bomb_2.gif", "bomb_3.gif"],
+    "maxhealth": 50,
+    "speed": [2, 2],
+    "shot_time_range": [1, 5],
+    "turn_rate": 0.01
+
+
+}

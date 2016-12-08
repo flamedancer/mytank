@@ -1,0 +1,17 @@
+{   
+    #坦克场景
+    "name" 坦克名字 : "",
+    "images"  坦克上下左右图片: {"up" : "" ,"right": "", "down", "left"},
+    "image_nochange"图像不随移动变化, 没有表示默认为FALSE: True,
+    "died_images" ： 坦克死亡效果图片：[],
+    
+    #  坦克数据
+    "maxhealth" HP:   ,
+    "speed" 坦克移动速度 : [左右移动速度, 上下移动速度],
+    "shot_time_range" 坦克开炮时间间隔范围, [最少多少秒，最多多少秒]: [ ,  ],
+    "turn_rate" 坦克主动转向概率 :  小数,
+    "taget" 是否有目标，有为1，没有为0: 
+
+
+
+}

@@ -1,0 +1,13 @@
+{   
+    "name" : "mytank",
+    "images" : {
+                   (0, -1)     :"mytank1.gif",
+                   (1, 0)  :"mytank2.gif",
+                   (0, 1)   :"mytank3.gif",
+                   (-1, 0)   :"mytank4.gif"
+               },
+    "died_images" : ["bomb_1.gif", "bomb_2.gif", "bomb_3.gif"],
+    "maxhealth": 1000.0,
+    "speed": [4, 4]
+
+}

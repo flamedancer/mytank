@@ -1,0 +1,16 @@
+{   
+    "name" : "ai_bossspider",
+    "images" : {
+                   (0, -1) :None,
+                   (1, 0)  :None,
+                   (0, 1)  :"bossspider.gif",
+                   (-1, 0) :None
+               },
+   "image_nochange":True,
+   
+    "died_images" : ["bomb_3.gif", "bomb_2.gif", "bomb_1.gif"],
+    "maxhealth": 1000,
+    "speed": [3, 3],
+    "turn_rate":0.02,
+    "shot_time_range":[0, 2]
+}

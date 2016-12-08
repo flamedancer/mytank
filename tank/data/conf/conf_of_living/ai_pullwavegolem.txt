@@ -1,0 +1,15 @@
+{   
+    "name" : "ai_pullwavegolem",
+    "images" : {
+                   (0, -1) :None,
+                   (1, 0)  :None,
+                   (0, 1)  :"pullwavegolem.gif",
+                   (-1, 0) :None
+               },
+    "image_nochange":True,
+    "died_images" : ["bomb_2.gif", "bomb_1.gif"],
+    "maxhealth": 60,
+    "speed": [1, 1],
+    "turn_rate":0.01,
+    "shot_time_range":[0, 5]
+}
