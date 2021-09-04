@@ -304,7 +304,6 @@ class Stage4(Stage):
     def servant(self):
         self.both_enemy()
         self.servant_over = self.bgmap.map_over and not len(self.servantgroup)
-        pass
 
     def startboss(self):
         # 出场动画

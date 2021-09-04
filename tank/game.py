@@ -8,7 +8,7 @@ from stage import *
 
 
 class Game:
-    def __init__(self, screen):
+    def __init__(self, screen, stage_num=1):
         self.clock = pygame.time.Clock()
         self.screen = screen
         self.screen = screen
@@ -17,7 +17,7 @@ class Game:
         self.control_delay_time = SCREEN_PER_SEC        # 控制键盘灵敏度 否则压下一次程序将判断为多次
         self.controltime = self.control_delay_time
 
-        self.stage_num = 1
+        self.stage_num = stage_num
 
     def gamestart(self):
         start_picture = load_image('start_pic.gif')

@@ -25,7 +25,23 @@ class Bulletstate_move(State):
         if not SCREENRECT.colliderect(self.mold.rect) or not self.mold.owner.bgmap.map_passive(self.mold.new_rect)\
         or not passive:
             self.mold.died()
+        return
+        
 
+class Bulletstate_move_no_block(State):
+    def __init__(self, bullet):
+        State.__init__(self, "move")
+        self.mold = bullet
+
+    def do_actions(self):
+        self.mold.new_rect = self.mold.rect.move(self.mold.direct[0] * self.mold.speed,
+                                 self.mold.direct[1] * self.mold.speed)
+        self.mold.rect = self.mold.new_rect
+
+    def check_conditions(self):
+        passive = collision(self.mold)
+        if not SCREENRECT.colliderect(self.mold.rect) or not passive:
+            self.mold.died()
         return
 
 
@@ -255,7 +271,7 @@ class PillboxBullet(Bullet, pygame.sprite.Sprite):
     def __init__(self, direct, angle, owner):
         Bullet.__init__(self, owner)
         self.name = self.owner.name + ":normalBullet"
-        self.nochange_image = load_image('shot1.gif')
+        self.nochange_image = load_image('fire.gif')
         self.died_images = load_images('shotdied.gif')
         self.image = pygame.transform.rotate(self.nochange_image, angle)
         self.direct = direct
@@ -264,7 +280,7 @@ class PillboxBullet(Bullet, pygame.sprite.Sprite):
         self.speed = max(self.rect.width, self.rect.height) / 2
 
         self.brain = StateMachine()
-        moving_state = Bulletstate_move(self)
+        moving_state = Bulletstate_move_no_block(self)
         self.brain.add_state(moving_state)
         self.brain.set_state("move")
 

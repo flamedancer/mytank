@@ -5,6 +5,7 @@ from pygame.locals import *
 
 #import pygame._view
 import game
+import sys
 from tools import *
 
 SCREEN_PER_SEC = 40
@@ -15,7 +16,7 @@ BOUNDARY_LINE_HEIGHT = 10
 SCREENRECT = Rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
 
 
-def start():
+def start(stage_num=1):
     #界面大小   分数面板
     # Initialise screen
     pygame.init()
@@ -26,7 +27,10 @@ def start():
     # Fill background
 
     pygame.display.flip()
-    game.Game(screen).run()
+    game.Game(screen, stage_num=stage_num).run()
 
 if __name__ == "__main__":
-    start()
+    stage_num = 1
+    if len(sys.argv) > 1:
+        stage_num = int(sys.argv[1])
+    start(stage_num=stage_num)

@@ -12,7 +12,7 @@
                    
                },
     "died_images" : ["bomb_1.gif", "bomb_2.gif", "bomb_3.gif"],
-    "maxhealth": 500,
+    "maxhealth": 1000,
     "speed": [3, 3],
     "shot_time_range": [0.2, 2],
     "turn_rate": 0.02

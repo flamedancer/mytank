@@ -34,23 +34,26 @@ class Snipe(Skill):
         Skill.__init__(self, owner)
         self.name = self.owner.name + "Snipe"
         self.image = load_image("Snipe.gif")
-        center = (self.owner.rect.center[0] + self.gap * self.owner.direct[0],
-                    self.owner.rect.center[1] + self.gap * self.owner.direct[1])
+        # center = (self.owner.rect.center[0] + self.gap * self.owner.direct[0],
+        #            self.owner.rect.center[1] + self.gap * self.owner.direct[1])
+        center = (SCREENRECT.width // 2, int(SCREENRECT.height // 2))
         self.rect = self.image.get_rect(center=center)
-        self.owner.Movable = False
+        self.owner.movable = False
         self.owner.skilling = True
         self.owner.shootable = False
 
-        self.delay_time = SCREEN_PER_SEC
+        self.delay_time = SCREEN_PER_SEC * 5
         self.thiscontroltime = self.delay_time
 
     def shot(self):
         for item in self.owner.game_items:
-            if isinstance(item, tanks.Ai_tank) and item.rect.collidepoint(self.rect.center):
-                item.died()
+            if not isinstance(item, tanks.Mytank) and item.rect.collidepoint(self.rect.center):
+                # item.died()
+                if item is not self:
+                    item.wounded(200)
 
     def killself(self):
-        self.owner.Movable = True
+        self.owner.movable = True
         self.owner.skilling = False
         self.owner.shootable = True
         self.kill()
@@ -58,20 +61,20 @@ class Snipe(Skill):
     def update(self, keystate):
         direction = None
         if not self.thiscontroltime:
-            if keystate[K_a]:
-                self.killself()
-            elif keystate[K_SPACE]:
+            if keystate[K_j]:
                 self.shot()
                 self.thiscontroltime = self.delay_time
+                self.killself()
+
         elif self.thiscontroltime > 0:
             self.thiscontroltime = self.thiscontroltime - 1
-        if keystate[K_UP]:
+        if keystate[K_w]:
             direction = (0, -1)
-        elif keystate[K_RIGHT]:
+        elif keystate[K_d]:
             direction = (1, 0)
-        elif keystate[K_DOWN]:
+        elif keystate[K_s]:
             direction = (0, 1)
-        elif keystate[K_LEFT]:
+        elif keystate[K_a]:
             direction = (-1, 0)
         if direction:
             self.rect.move_ip(direction[0] * self.move_speed,

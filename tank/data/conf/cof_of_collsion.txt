@@ -163,12 +163,12 @@
                 },
     "ai_pullwavegolem:pullwave":
                 {
-                    "mytank" : [0, 0, 0, 1]
+                    "mytank" : [0, 0, 1, 1]
                 },
     
     "ai_pushwavegolem":
                 {
-                    "mytank" : [1, 0, 0],
+                    "mytank" : [1, 20, 0],
                     "mytank:skill_fireshield" : [1, 10, 10],
                     "mytank:normalBullet" : [1, 10, 10],
                     "ai_tankfactory":[1, 0, 0],
@@ -177,15 +177,15 @@
 
     "ai_pushwavegolem:pushwave":
             {
-                "mytank" : [0, 0, 1, 1]
+                "mytank" : [0, 0, 2, 1]
             },
      
     'ai_pillbox:normalBullet':
             {
-                    "mytank" : [1, 10, 10],
+                    "mytank" : [1, 50, 10],
                     "mytank:skill_fireshield" : [1, 10, 10],
                     "mytank_normalBullet" : [1, 10, 10],
-                    "ai_tankfactory":[1, 0, 0]
+                    "ai_tankfactory":[0, 0, 0]
             },
 
     "ai_bossflowerfairy:flower":

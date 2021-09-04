@@ -205,6 +205,7 @@ class Mytank(Tank):
         self.speed = self.conf["speed"]
         # skill
         self.maxfireshield = 15
+        self.maxsnipe = 5
         # 血条
         self.screen = screen
         healthpannel(self.screen, self.health / self.conf["maxhealth"])
@@ -213,13 +214,13 @@ class Mytank(Tank):
 
     def move(self, keystate):
         direction = None
-        if keystate[K_UP]:
+        if keystate[K_w]:
             direction = (0, -1)
-        elif keystate[K_RIGHT]:
+        elif keystate[K_d]:
             direction = (1, 0)
-        elif keystate[K_DOWN]:
+        elif keystate[K_s]:
             direction = (0, 1)
-        elif keystate[K_LEFT]:
+        elif keystate[K_a]:
             direction = (-1, 0)
         if direction:
 
@@ -243,7 +244,7 @@ class Mytank(Tank):
             self.move(keystate)
         # firing 判断是否已经在开炮
         if self.shootable:
-            firing = keystate[K_SPACE]
+            firing = keystate[K_j]
             if not self.shoting and firing:
                 self.shot()
             self.shoting = firing
@@ -255,9 +256,10 @@ class Mytank(Tank):
             self.died()
 
     def do_skill(self, keystate):
-        if keystate[K_s]:
+        if keystate[K_u] and self.maxsnipe:
+            self.maxsnipe -= 1
             Snipe(self)
-        elif keystate[K_z] and self.maxfireshield > 0:
+        elif keystate[K_k] and self.maxfireshield > 0:
             Fireshield(self)
             self.maxfireshield = self.maxfireshield - 1
 
@@ -401,7 +403,7 @@ class Bossspider(Tank, pygame.sprite.Sprite):
         self.rect = self.image.get_rect(topleft=(left, top))
 
         self.speed = self.conf["speed"]
-        self.Movable = True
+        self.moveable = True
         self.aitank_shot_time_range = [time * SCREEN_PER_SEC for time in self.conf["shot_time_range"]]
         self.shot_time = random.randint(*self.aitank_shot_time_range)
         self.brain.think()
@@ -659,6 +661,9 @@ class TankFactory(Obstruction, pygame.sprite.Sprite):
 
     def update(self, *args):
         self.ablity()
+        # 如果不在屏幕内 则消失
+        if not SCREENRECT.contains(self.rect):
+            self.kill()
 
     def wounded(self, wound):
         self.health = self.health - wound
@@ -709,6 +714,9 @@ class Pillbox(Obstruction, pygame.sprite.Sprite):
 
     def update(self, *args):
         self.ablity()
+        # 如果不在屏幕内 则消失
+        if not SCREENRECT.contains(self.rect):
+            self.kill()
 
     def wounded(self, wound):
         self.health = self.health - wound

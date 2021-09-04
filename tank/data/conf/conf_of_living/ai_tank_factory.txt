@@ -4,7 +4,7 @@
                    (0, -1)     :"tankfactory.gif"
                },
     "died_images" : ["bomb_3.gif", "bomb_2.gif", "bomb_3.gif"],
-    "maxhealth": 120,
-    "shot_time_range": [2, 5]
+    "maxhealth": 300,
+    "shot_time_range": [1, 3]
 
 }
